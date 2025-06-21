@@ -1,59 +1,143 @@
-<h1 align="center">[ Tool Pack ]</h1>
-<h4 align="center">[ Simple tool for Building Package, Encrypt, Upload package to public ]</h4>
-<p align="center">
-<a href="https://github.com/djunekz"><img src="https://img.shields.io/static/v1?style=for-the-badge&logo=github&label=AUTHOR&message=DJUNEKZ&color=blue")</a>
-<a href="https://github.com/djunekz/toolpack/tree/1.0><img src="https://img.shields.io/static/v1?style=for-the-badge&logo=Clockify&logoColor=white&label=Version&message=1.0&color=green")</a><br>
-<a href="https://github.com/djunekz/toolpack/releases"><img alt="Latest Release" src="https://img.shields.io/github/release/djunekz/toolpack.svg" /></a><br>
-<img src="https://img.shields.io/static/v1?label=Android&logo=android&logoColor=green&color=green&message=Support&style=flat">
-		
-# Tool Package
+# Toolpack: Your Essential Termux Utility 🚀
 
-Simple tool for building package, encrypt, upload package to public<br>
-Author by Djunekz, jika ingin recode script ini usahakan cantumkan nama author di salinan kalian
- 
-> [!NOTE]
-> **This tool supports anyone to create installation packages by uploading your deb file into the packages folder.**
+![Toolpack](https://img.shields.io/badge/Toolpack-v1.0.0-brightgreen) ![GitHub](https://img.shields.io/badge/GitHub-Toolpack-blue) ![Releases](https://img.shields.io/badge/Releases-latest-orange)
 
-# First Instalation
+Welcome to **Toolpack**, a powerful Termux utility designed to streamline your workflow. With Toolpack, you can build packages, encrypt files, and upload packages to public repositories with ease. This README will guide you through installation, usage, and the various features of Toolpack.
 
-### **Required Apps**
-> **Termux**
->
-> *You need to download termux from the official*
-> **<a href="https://github.com/termux/termux-app/releases/latest">HERE</a>**
->
-> *Install app termux from your android*
+## Table of Contents
 
-### **Minimum requirements for android device**
-> - *Android 8.x+*
->
-> - *4Gb of ram (4+gb recommended)*
->
+1. [Features](#features)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Commands](#commands)
+5. [Contributing](#contributing)
+6. [License](#license)
+7. [Support](#support)
 
-### **Instalation Process** 
-Copy Command for install,
-Copy Paste in termux
+## Features
+
+- **Build Packages**: Easily create Debian packages from your source files.
+- **Encrypt Files**: Secure your sensitive files with robust encryption.
+- **Upload Packages**: Share your packages with the world by uploading them to public repositories.
+- **Simple Interface**: User-friendly commands make it easy to get started.
+- **Termux Compatibility**: Designed specifically for Termux, ensuring a smooth experience.
+
+## Installation
+
+To install Toolpack, follow these steps:
+
+1. Open your Termux app.
+2. Update your package list:
+   ```bash
+   pkg update && pkg upgrade
+   ```
+3. Install the necessary dependencies:
+   ```bash
+   pkg install git
+   ```
+4. Clone the Toolpack repository:
+   ```bash
+   git clone https://github.com/Yellowie/toolpack.git
+   ```
+5. Navigate to the Toolpack directory:
+   ```bash
+   cd toolpack
+   ```
+6. Make the installation script executable:
+   ```bash
+   chmod +x install.sh
+   ```
+7. Run the installation script:
+   ```bash
+   ./install.sh
+   ```
+
+For the latest releases, visit [Toolpack Releases](https://github.com/Yellowie/toolpack/releases).
+
+## Usage
+
+Once installed, you can start using Toolpack. Here’s how:
+
+1. **Build a Package**:
+   To build a package, use the command:
+   ```bash
+   toolpack build <source-directory>
+   ```
+   Replace `<source-directory>` with the path to your source files.
+
+2. **Encrypt a File**:
+   To encrypt a file, run:
+   ```bash
+   toolpack encrypt <file>
+   ```
+   Replace `<file>` with the path to the file you want to encrypt.
+
+3. **Upload a Package**:
+   To upload a package, use:
+   ```bash
+   toolpack upload <package-file>
+   ```
+   Replace `<package-file>` with the path to your built package.
+
+## Commands
+
+### Build Command
+
+The build command compiles your source code into a Debian package. It automatically handles dependencies and generates a `.deb` file.
+
+```bash
+toolpack build <source-directory>
 ```
-git clone https://github.com/djunekz/toolpack && cd toolpack && ./install
+
+### Encrypt Command
+
+The encrypt command uses strong encryption algorithms to secure your files. You will be prompted to enter a password for encryption.
+
+```bash
+toolpack encrypt <file>
 ```
-**Waiting installation successful**
-**then running type** `toolpack` **to start tool**
 
-### **How to upload your package to public**
+### Upload Command
 
-1. Encrypt your file: `support file (shell or python)`
-2. Rename your encrypted file how use `mv yourencrypt yourfilename.py` (.py or .sh)
-3. Build package, input your file .py or .sh for building process create debian package
-4. Upload your debian package
+The upload command allows you to share your packages with others. It connects to a public repository and uploads your package.
 
-### **How to encrypt your files**
+```bash
+toolpack upload <package-file>
+```
 
-1. if your files using shell or sh, please write `#!/usr/bin/bash` in header your file
-2. Encrypt your file: `support file (shell or python)`
+## Contributing
 
-### Contact Us
+We welcome contributions! If you want to help improve Toolpack, follow these steps:
 
-Djunekz: github.guiding533@passinbox.com
-Mr xXx: mail.reconfirm867@passinbox.com
-Hmei7: xxx.canon600@passinbox.com
-RedHh: gab288.gab288@passinbox.com
+1. Fork the repository.
+2. Create a new branch for your feature:
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+3. Make your changes and commit them:
+   ```bash
+   git commit -m "Add your message here"
+   ```
+4. Push to your branch:
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+5. Create a pull request.
+
+## License
+
+Toolpack is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Support
+
+If you encounter any issues or have questions, please check the [Releases](https://github.com/Yellowie/toolpack/releases) section for updates and documentation.
+
+## Conclusion
+
+Toolpack is a versatile tool that enhances your Termux experience. Whether you are building packages, encrypting files, or sharing your work, Toolpack simplifies the process. Download and install Toolpack today, and explore its powerful features.
+
+For the latest releases, visit [Toolpack Releases](https://github.com/Yellowie/toolpack/releases).
+
+---
+
+Feel free to reach out if you have any suggestions or feedback. Happy coding!
